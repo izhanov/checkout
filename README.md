@@ -1,0 +1,2 @@
+# checkout
+Simple cashier application
