@@ -1,10 +1,14 @@
 # frozen_string_literal: true
 
-class Item
-  attr_reader :title, :code
+require "bigdecimal"
+require "bigdecimal/util"
 
-  def initialize(title:, code:)
+class Item
+  attr_reader :title, :code, :price
+
+  def initialize(title:, code:, price:)
     @title = title
     @code = code
+    @price = BigDecimal(price.to_d).round(2)
   end
 end

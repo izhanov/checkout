@@ -15,7 +15,8 @@ Simple cashier application
 
 ```ruby
 pricing_rules = [
-  PricingRules::BuyOneGetOneFree.new("GR1")
+  PricingRules::BuyOneGetOneFree.new(item_code: "GR1"),
+  PricingRules::Discount.new(item_code: "SR1", dicsount_price: 4.50, min_items: 3)
 ]
 
 co = Checkout.new(pricing_rules)
