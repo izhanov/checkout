@@ -33,3 +33,19 @@ co.scan(item_2)
 price = co.total
 # => £8.11
 ```
+
+4. A few words about the pricing rules:
+
+- `PricingRules::Default` - default pricing rule (no discount)
+- `PricingRules::BuyOneGetOneFree` - buy one get one free
+- `PricingRules::Discount` - discount rule
+  - `type: :fixed` - fixed discount price for item (value: 4.50 => £4.50 of the price)
+  - `type: :propotional` - propotional discount price for items (e.g. value: "2/3" (String) of the all price)
+  - `type: :percentage` - 50% of the price (e.g 50% of £10.00 => £5.00)
+  - `value: "£4.50"` - the value of discount type (e.g value: 4.5 => £4.50 of the price)
+
+
+5. Run tests:
+
+`bin/rspec`
+
