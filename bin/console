@@ -7,4 +7,5 @@ loader.push_dir("./lib")
 loader.setup
 
 require "irb"
+
 IRB.start(__FILE__)
